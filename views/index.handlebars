@@ -1,44 +1,54 @@
-<div class="main-container valign center">
-    <nav>
-        <div class="nav-wrapper black">
-            <a href="#" class="brand-logo center white-text">Wait-a-Burger</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a class="waves-effect waves-light" id="reset-btn">Reset Table</a></li>
-            </ul>
-        </div>
-    </nav>
-    <div class="row">
+<nav>
+    <div class="nav-wrapper black">
+        <a href="#" class="brand-logo center white-text">Wait-a-Burger</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a class="waves-effect waves-light" id="reset-btn">Reset Table</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="main-container valign center container">
+    <div class="row table-bg">
         <div class="col s4 m4">
-            <h4>Place an Order</h4>
-            <form id="order-form">
-                <div class="row">
-                    <div class="input-field col m8 offset-m2">
-                    <input placeholder="Side of Fries" id="order" type="text" class="validate">
-                    <label for="orderName">Order</label>
-                </div>
-                </div>
-                 <a class="btn-floating btn-large waves-effect waves-light black" id="submit-btn"><i class="material-icons">add</i></a>
-            </form>
-        </div>
-        <div class="col s4 m4">
-            <h4>What's Ordered</h4>
-            <ul id="placed-orders">
-                {{#each burgers}}
-                {{#unless devoured}}
-                <li>{{burger_name}} <a class="waves-effect waves-light btn-small black served-btn" id="{{id}}"><i class="material-icons">assignment_turned_in</i></a></li> 
-                {{/unless}}
-                {{/each}}
-            </ul>
+            <div class="row">
+                <h4>Place an Order</h4>
+                <hr>
+                <form id="order-form">
+                    <div class="row">
+                        <div class="input-field col m8 offset-m2">
+                            <input placeholder="Side of Fries" id="order" type="text" class="validate">
+                            <label for="orderName">Order</label>
+                        </div>
+                    </div>
+                    <a class="btn-floating btn-large waves-effect waves-light black" id="submit-btn"><i
+                            class="material-icons">add</i></a>
+                </form>
+            </div>
         </div>
         <div class="col s4 m4">
-            <h4>What's Served</h4>
-            <ul>
-                {{#each burgers}}
-                {{#if devoured}}
-                <li>{{burger_name}}</li>
-                {{/if}}
-                {{/each}}
-            </ul>
+            <div class="row">
+                <h4>What's Ordered</h4>
+                <ul id="placed-orders">
+                    {{#each burgers}}
+                    {{#unless devoured}}
+                    <li>{{burger_name}} <a class="waves-effect waves-light btn-small black served-btn" id="{{id}}"><i
+                                class="material-icons">assignment_turned_in</i></a></li>
+                    {{/unless}}
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+        <div class="col s4 m4">
+            <div class="row">
+                <h4>What's Served</h4>
+                <ul>
+                    {{#each burgers}}
+                    {{#if devoured}}
+                    <li>{{burger_name}}</li>
+                    {{/if}}
+                    {{/each}}
+                </ul>
+            </div>
         </div>
     </div>
 </div>
