@@ -1,6 +1,6 @@
 <nav>
     <div class="nav-wrapper black">
-        <a href="#" class="brand-logo center white-text">Wait-a-Burger</a>
+        <a href="#" class="brand-logo center white-text">WAITABURGER</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a class="waves-effect waves-light" id="reset-btn">Reset Table</a></li>
         </ul>
@@ -11,7 +11,7 @@
     <div class="row table-bg">
         <div class="col s4 m4">
             <div class="row">
-                <h4>Place an Order</h4>
+                <h4 class="table-header">Place an Order</h4>
                 <hr>
                 <form id="order-form">
                     <div class="row">
@@ -27,7 +27,7 @@
         </div>
         <div class="col s4 m4">
             <div class="row">
-                <h4>What's Ordered</h4>
+                <h4 class="table-header">What's Ordered</h4>
                 <hr>
                 <ul id="placed-orders">
                     {{#each burgers}}
@@ -41,7 +41,7 @@
         </div>
         <div class="col s4 m4">
             <div class="row">
-                <h4>What's Served</h4>
+                <h4 class="table-header">What's Served</h4>
                 <hr>
                 <ul>
                     {{#each burgers}}

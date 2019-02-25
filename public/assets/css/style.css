@@ -15,5 +15,13 @@ body{
 }
 
 .input-field > label {
-color: #000000;
+    color: #000000;
+}
+
+.brand-logo{
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+}
+
+.table-header{
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
 }
